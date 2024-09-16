@@ -1,0 +1,213 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    position: relative;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .quadro-solido {
+    width: 350px;
+    height: 450px; /* Aumentando a altura para incluir o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .imagem-redonda {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  
+  .texto {
+    text-align: center;
+  }
+  
+  .texto h2 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .texto p {
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  /* Posicionando o dropdown no canto superior esquerdo */
+  .dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .dropbtn {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .dropbtn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .modo-claro {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .modo-escuro {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .modo-kawaii {
+    background-color: #fddde6;
+    color: #ff69b4;
+  }
+  
+  .modo-azulClaro {
+    background-color: #e0f7fa;
+    color: #00796b;
+  }
+  
+  .modo-verdeClaro {
+    background-color: #e8f5e9;
+    color: #388e3c;
+  }
+  
+  /* Quadros que mudam de cor conforme o modo */
+  .modo-claro .quadro-solido {
+    background-color: #f0f0f0;
+  }
+  
+  .modo-escuro .quadro-solido {
+    background-color: #333333;
+  }
+  
+  .modo-kawaii .quadro-solido {
+    background-color: #ffb6c1;
+  }
+  
+  .modo-azulClaro .quadro-solido {
+    background-color: #b2ebf2;
+  }
+  
+  .modo-verdeClaro .quadro-solido {
+    background-color: #c8e6c9;
+  }
+  
+  /* Estilos para as palavras mudarem de cor conforme o tema */
+  .modo-claro .texto h2,
+  .modo-claro .texto p {
+    color: #000; /* Preto para modo claro */
+  }
+  
+  .modo-escuro .texto h2,
+  .modo-escuro .texto p {
+    color: #fff; /* Branco para modo escuro */
+  }
+  
+  .modo-kawaii .texto h2,
+  .modo-kawaii .texto p {
+    color: #ff69b4; /* Rosa para modo Kawaii */
+  }
+  
+  .modo-azulClaro .texto h2,
+  .modo-azulClaro .texto p {
+    color: #00796b; /* Verde-azulado escuro para modo azul claro */
+  }
+  
+  .modo-verdeClaro .texto h2,
+  .modo-verdeClaro .texto p {
+    color: #388e3c; /* Verde escuro para modo verde claro */
+  }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .quadro-solido {
+      width: 300px; /* Reduzindo a largura para caber melhor em telas menores */
+      height: 400px; /* Ajustando a altura proporcionalmente */
+    }
+  
+    .imagem-redonda {
+      width: 150px; /* Diminuindo o tamanho da imagem redonda */
+      height: 150px;
+    }
+  
+    .texto h2 {
+      font-size: 20px; /* Ajustando o tamanho da fonte do nome */
+    }
+  
+    .texto p {
+      font-size: 14px; /* Ajustando o tamanho da fonte da descrição */
+    }
+  
+    .dropbtn {
+      padding: 10px 15px; /* Reduzindo o tamanho do botão dropdown */
+      font-size: 14px; /* Ajustando a fonte para o dropdown */
+    }
+  
+    .dropdown-content a {
+      padding: 10px 12px; /* Ajustando o tamanho do menu dropdown */
+      font-size: 14px;
+    }
+  
+    /* Ajuste para centralizar o conteúdo no celular */
+    body {
+      flex-direction: column;
+      padding: 20px; /* Adicionando espaço ao redor */
+    }
+  }
